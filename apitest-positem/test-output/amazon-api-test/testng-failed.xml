@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [amazon-api-test]">
+  <listeners>
+    <listener class-name="cn.nhsoft.amazoncloud.apitest.utils.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test verbose="2" name="demo">
+    <packages>
+      <package name="cn.nhsoft.amazoncloud.apitest.positem"/>
+    </packages>
+    <classes>
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.package-info"/>
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemNewTest"/>
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemTest"/>
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemTest1"/>
+    </classes>
+  </test> <!-- demo -->
+  <test name="demo(failed)">
+    <classes>
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemNewTest">
+        <methods>
+          <include name="testQuery_feed_1" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- cn.nhsoft.amazoncloud.apitest.positem.PosItemNewTest -->
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemTest">
+        <methods>
+          <include name="test_feed_1" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- cn.nhsoft.amazoncloud.apitest.positem.PosItemTest -->
+      <class name="cn.nhsoft.amazoncloud.apitest.positem.PosItemTest1">
+        <methods>
+          <include name="testQuery_feed_1"/>
+        </methods>
+      </class> <!-- cn.nhsoft.amazoncloud.apitest.positem.PosItemTest1 -->
+    </classes>
+  </test> <!-- demo(failed) -->
+</suite> <!-- Failed suite [amazon-api-test] -->

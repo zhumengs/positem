@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %5p [%t] (%F:%L) - %m%n" />
+		</layout>
+
+		<!--限制输出级别 -->
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="ERROR" />
+			<param name="LevelMin" value="TRACE" />
+		</filter>
+	</appender>
+
+	<appender name="FILE" class="org.apache.log4j.FileAppender">
+		<param name="File" value="../logs/pt-server.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %5p [%t] (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.litt2.log4j" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+
+	<category name="com.litt3">
+		<level value="DEBUG" />
+		<appender-ref ref="CONSOLE" />
+	</category>
+
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>  

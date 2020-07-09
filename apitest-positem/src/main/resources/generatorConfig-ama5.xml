@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="/Users/zhaocong/.m2/repository/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar" />
+	<context id="context_ama5">
+		<jdbcConnection 
+			driverClass="com.mysql.cj.jdbc.Driver" 
+			connectionURL="jdbc:mysql://rm-bp125y2095k0z14ou5o.mysql.rds.aliyuncs.com:3306/ama5_mysql" 
+			userId="nhsoft_hzqa" password="NEXvEX1KSIvQjZc0Lih4" />
+			<!-- connectionURL="jdbc:mysql://nhsoft-dev.rwlb.rds.aliyuncs.com:3306/ama5_mysql"
+			userId="nhsoft_dev" password="Wnb2qxxMWz93ZYKn4mwy" /> -->
+			
+			
+		<javaModelGenerator targetPackage="cn.nhsoft.amazoncloud.apitest.dao.ama5.model" targetProject="apitest-positem" />
+
+		<sqlMapGenerator targetPackage="cn.nhsoft.amazoncloud.apitest.dao.ama5" targetProject="apitest-positem" />
+		<javaClientGenerator targetPackage="cn.nhsoft.amazoncloud.apitest.dao.ama5.mapper" targetProject="apitest-positem" type="XMLMAPPER" />
+
+		<table schema="rop" tableName="pos_item"></table>
+	</context>
+</generatorConfiguration>

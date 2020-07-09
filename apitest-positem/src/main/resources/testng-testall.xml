@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="amazon-api-test">
+	<listeners>
+		<listener class-name="cn.nhsoft.amazoncloud.apitest.utils.ExtentTestNGIReporterListener" />
+	</listeners>
+	<test name="demo" verbose="2" preserve-order="true">
+		<packages>
+			<package name="cn.nhsoft.amazoncloud.apitest.positem" />
+		</packages>
+	</test>
+</suite>
